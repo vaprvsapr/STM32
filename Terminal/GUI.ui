@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="GroupBoxTransmitData">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>280</width>
+      <height>319</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Transmit Data</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="DataTorTransmitLabel">
+       <property name="text">
+        <string>Data to transmit</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>false</bool>
+       </property>
+       <property name="openExternalLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="LineDataToTransmit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ButtonTransmit">
+       <property name="text">
+        <string>Channel is not opened</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="LogTransmittedData"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="GroupBoxChannelControl">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>217</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Channel Control</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="1" column="0">
+      <widget class="QComboBox" name="ListChannels"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="ButtonUpdateChannelList">
+       <property name="text">
+        <string>Update</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="LabelChannelInfo">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Channel is not opened</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="ButtonOpenClose">
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="ChannelLabel">
+       <property name="text">
+        <string>Channle</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="GroupBoxAccelerationInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>281</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Acceleration Info</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="XAxisAccelerationLabel">
+       <property name="text">
+        <string>X Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="LabelXAxisAcceleration">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="YAxisAccelerationLabel">
+       <property name="text">
+        <string>Y Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ZAxisAccelerationLabel">
+       <property name="text">
+        <string>Z Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="LabelZAxisAcceleration">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="LabelYAxisAcceleration">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="GroupBoxGyroInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>281</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Gyro Info</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="XAxisAccelerationLabel_2">
+       <property name="text">
+        <string>X Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="LableXAxisAcceleration_2">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="YAxisAccelerationLabel_2">
+       <property name="text">
+        <string>Y Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ZAxisAccelerationLabel_2">
+       <property name="text">
+        <string>Z Axis Acceleration: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="LableZAxisAcceleration_2">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="LabelYAxisAcceleration_2">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="GroupBoxPWMInputInfo">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>170</y>
+      <width>281</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Engines Info</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="Engine1RPMLabel">
+       <property name="text">
+        <string>Engine 1 RPM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="LableEngine1RPM">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="Engine2RPMLabel">
+       <property name="text">
+        <string>Engine 2 RPM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="LableEngine2RPM">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="Engine3RPMLabel">
+       <property name="text">
+        <string>Engine 3 RPM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="LableEngine3RPM">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="Engine4RPMLabel">
+       <property name="text">
+        <string>Engine 4 RPM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="LableEngine4RPM">
+       <property name="text">
+        <string>value</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="GroupBoxDRVControl">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>290</y>
+      <width>321</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DRV Control</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>301</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="KILabel">
+        <property name="text">
+         <string>KI</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="LineKI"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ButtonSendKI">
+        <property name="text">
+         <string>Send KI</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="text">
+         <string>DRV_A</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="text">
+         <string>DRV_B</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="text">
+         <string>DRV_C</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="text">
+         <string>DRV_D</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>301</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="KPLabel">
+        <property name="text">
+         <string>KP</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="LineKP"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ButtonSendKP">
+        <property name="text">
+         <string>Send KP</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1060</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
